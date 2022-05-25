@@ -1,12 +1,18 @@
-# Google Software Product Sprint
+<!-- Updated ReadME -->
 
-This repo contains the projects you'll work on throughout SPS.
+<div align="center">
+    <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="Logo" width="80" height="80">
 
-To get started:
+<h1 align="center">Google Software Product Sprint</h1>
 
-- Login to [Google Cloud Shell](https://ssh.cloud.google.com/cloudshell/editor)
-- Clone this repo: `cd; git clone https://github.com/google/software-product-sprint.git`
-- Open the GitHub setup walkthrough: `teachme ~/software-product-sprint/walkthroughs/week-0-setup/github-setup-walkthrough.md`
-  - If the tutorial panel does not open or display the walkthrough contents, try refreshing the page.
+  <p align="center">
+    This repo contains Mateo's portfolio and SPS projects.
+</div>
+<br>
 
-Then follow the on-screen instructions to set up your repo.
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Google SPS is an 11 week program where students (<- that's me :0) work alongside Googlers with the objective of furthering important technical skills and getting hands on career mentorship
+
+In this program I'll have the opportunity to build my resume, practice my interviewing skills, network with Googlers across the company, and learn more about many of their technical career paths. 
