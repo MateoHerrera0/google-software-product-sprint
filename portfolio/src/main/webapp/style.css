@@ -5,3 +5,10 @@ body::before {
     content: '';
     height: 50px;
 }
+
+/* Fixed carousel images size */
+.carousel-inner img {
+    width: auto;
+    height: 250px;
+    max-height: 250px;
+  }
