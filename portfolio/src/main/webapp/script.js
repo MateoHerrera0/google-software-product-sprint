@@ -16,14 +16,18 @@
  * Adds a random quote to the page.
  */
 function addQuote() {
-    const quote =
-        ['“Do You Like Scary Movies?” - Scream', '“Do You Want To Play A Game?” - Saw', '“It Rubs The Lotion On Its Skin Or Else It Gets The Hose Again.” - The Silence Of The Lambs',
-        '"Groovy" - Evil Dead II', '“Nobody trusts anybody now…and we\'re all very tired.” - The Thing', '“It\'s Halloween; I guess everyone\'s entitled to one good scare.” - Halloween'];
-  
-    // Pick a random quote.
-    const chosenQuote = quote[Math.floor(Math.random() * quote.length)];
-  
-    // Add it to the page.
-    const quoteContainer = document.getElementById('quote');
-    quoteContainer.innerText = chosenQuote;
-  }
+  const quotes = [
+    '“Do You Like Scary Movies?” - Scream', 
+    '“Do You Want To Play A Game?” - Saw', 
+    '“It Rubs The Lotion On Its Skin Or Else It Gets The Hose Again.” - The Silence Of The Lambs',
+    '"Groovy" - Evil Dead II', '“Nobody trusts anybody now…and we\'re all very tired.” - The Thing', 
+    '“It\'s Halloween; I guess everyone\'s entitled to one good scare.” - Halloween'
+  ];
+
+  // Pick a random quote.
+  const chosenQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+  // Add it to the page.
+  const quoteContainer = document.getElementById('quote');
+  quoteContainer.innerText = chosenQuote;
+}

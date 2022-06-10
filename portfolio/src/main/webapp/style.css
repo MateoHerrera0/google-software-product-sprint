@@ -1,14 +1,14 @@
 /* Nav bar was eating the top at the beginning befor scrolling,
 so I added a space before that */
 body::before {
-    display: block;
-    content: '';
-    height: 50px;
+  display: block;
+  content: '';
+  height: 50px;
 }
 
 /* Fixed carousel images size */
 .carousel-inner img {
-    width: auto;
-    height: 250px;
-    max-height: 250px;
-  }
+  width: auto;
+  height: 250px;
+  max-height: 250px;
+}
