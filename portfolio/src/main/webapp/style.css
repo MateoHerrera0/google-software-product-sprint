@@ -12,3 +12,8 @@ body::before {
   height: 250px;
   max-height: 250px;
 }
+
+/* Turn secret heart button red on hover */
+.bi-heart-fill:hover{
+  color: red !important;
+}
