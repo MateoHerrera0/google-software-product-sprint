@@ -29,12 +29,15 @@
             <li class="nav-item">
               <a href="#skills" class="nav-link">Skills</a>
             </li>
-              <li class="nav-item">
-                <a href="#random-quote" class="nav-link">Random Quote</a>
-              </li>
-              <li class="nav-item">
-                <a href="#contact-me" class="nav-link">Contact Me</a>
-              </li>
+            <li class="nav-item">
+              <a href="#forum" class="nav-link">Public Forum</a>
+            </li>
+            <li class="nav-item">
+              <a href="#random-quote" class="nav-link">Random Quote</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-me" class="nav-link">Contact Me</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -189,6 +192,19 @@
       </div>
     </section>
 
+    <!-- Forum section -->
+    <section class="p-5 text-center" id="forum">
+      <div class="container">
+        <!-- Info column -->
+        <h1 class="pb-3">Public Forum :v</h1>
+        <p class="lead">This is a public forum, where people can contact me, tell a joke or simply say hi. People who have found the secret section will have a yellow frame in their post.</p>
+        <p class="lead">Yes they are cooler.</p>
+        <button type="button" class="btn btn-warning" onclick="addForumPosts()"><i class="bi bi-chat-square-quote text-light"></i></button>
+      </div>
+      <div class="row text-center d-flex flex-md-nowrap align-items-center" id="forum-area">
+      </div>
+    </section>
+
     <!-- Random quote section -->
     <section class="p-5 bg-primary text-center text-md-start text-light" id="random-quote">
       <div class="container bg-primary text-light">
@@ -212,7 +228,7 @@
       <div class="container">
         <h1 class="text-center pb-3">Contact Me :D</h1>
         <p class="lead">Here's some sites where you can follow or contact me. <br> Please I'm desperate.</p>
-        <div class="row text-center g-4">
+        <div class="row text-center g-4 pb-4">
           <!-- Linkedin profile section -->
           <div class="col-md d-flex align-items-stretch">
             <div class="card bg-light text-dark">
@@ -248,6 +264,28 @@
               </div>
           </div>
         </div>
+        <p class="lead">You can also post a message which will be displayed in the previous forum section.</p>
+        <p class="lead">I'll be sure to check it out!</p>
+        <!-- Form column -->
+        <div class="card p-3 bg-light rounded text-center">
+          <form action="/form-handler" method="POST">
+            <div class="form-group p-3 row align-items-center justify-content-between">
+              <div class="col">
+                  <label class="h5" for="first-name">First Name</label>
+                  <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Jhon">
+              </div>
+              <div class="col">
+                  <label class="h5" for="last-name">Last Name</label>
+                  <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Doe">
+              </div>
+            </div>
+            <div class="form-group p-3">
+              <label class="h5" for="message">Something</label>
+              <textarea class="form-control" id="message" name="message" rows="6" placeholder="You can write your contact Info, favourite move, hobbies, secret section bragging rights, whatever you want!"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -263,8 +301,6 @@
       </p>
     </section>
 
-
-
     <!-- Collapsable secret form section -->
     <section class="collapse" id="secret-form-collapse">
       <div class="bg-dark text-light p-5 text-md-start text-center">
@@ -278,10 +314,16 @@
           </div>
           <!-- Form column -->
           <div class="col-md p-3 bg bg-success rounded text-center">
-            <form action="/form-handler" method="POST">
-              <div class="form-group p-3">
-                <label class="h5" for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Jhon Doe">
+            <form action="/secret-form-handler" method="POST">
+              <div class="form-group p-3 row align-items-center justify-content-between">
+                <div class="col">
+                    <label class="h5" for="first-name">First Name</label>
+                    <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Jhon">
+                </div>
+                <div class="col">
+                    <label class="h5" for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Doe">
+                </div>
               </div>
               <div class="form-group p-3">
                 <label class="h5" for="message">Something</label>

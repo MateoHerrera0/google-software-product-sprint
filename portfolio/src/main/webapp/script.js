@@ -16,13 +16,6 @@
  * Adds a random quote to the page.
  */
 async function addQuote() {
-  // const quotes = [
-  //   '“Do You Like Scary Movies?” - Scream', 
-  //   '“Do You Want To Play A Game?” - Saw', 
-  //   '“It Rubs The Lotion On Its Skin Or Else It Gets The Hose Again.” - The Silence Of The Lambs',
-  //   '"Groovy" - Evil Dead II', '“Nobody trusts anybody now…and we\'re all very tired.” - The Thing', 
-  //   '“It\'s Halloween; I guess everyone\'s entitled to one good scare.” - Halloween'
-  // ];
 
   const responseFromServer = await fetch('/quote');
   // The json() function returns an object that contains fields that we can
@@ -38,3 +31,39 @@ async function addQuote() {
 }
 
 
+/**
+ * Adds forum posts to forum
+ */
+async function addForumPosts() {
+
+  const responseFromServer = await fetch('/get-posts');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const posts = await responseFromServer.json();
+  console.log(posts);
+
+  const bootstrap = 'col-md-4 card me-md-4 mb-md-0 mb-4 p-3 rounded text-center';
+  let textColor = ''
+  let bg = ''
+  
+  // Add it to the page.
+  const forumContainer = document.getElementById('forum-area');
+  
+  for (let i = 0; i < posts.length; i++) {
+    const element = posts[i];
+    let div = document.createElement('div');
+    if (element.secret) {
+      bg = ' bg-warning';
+      textColor = ' text-light';
+    } else {
+      bg = ' bg-light';
+      textColor = ' text-dark';
+    }
+
+    let tags = bootstrap + bg + textColor;
+    div.setAttribute('class', tags);
+    div.innerHTML = "<p>" + element.message + "<br>-" + element.firstName + " " + element.lastName + "</p>";
+    forumContainer.appendChild(div);
+  }
+  
+}

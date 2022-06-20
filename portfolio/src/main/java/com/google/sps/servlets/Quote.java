@@ -16,7 +16,7 @@ public class Quote extends HttpServlet {
     "\"Do You Want To Play A Game?\" - Saw", 
     "\"It Rubs The Lotion On Its Skin Or Else It Gets The Hose Again.\" - The Silence Of The Lambs",
     "\"Groovy\" - Evil Dead II", "\"Nobody trusts anybody now…and we\'re all very tired.\" - The Thing", 
-    "\"It\'s Halloween; I guess everyone\'s entitled to one good scare.\" - Halloween"
+    "\"It\'s Halloween; I guess everyone\'s entitled to one good scare.\" - Halloween",
   };
 
   @Override
