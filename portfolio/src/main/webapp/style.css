@@ -17,3 +17,8 @@ body::before {
 .bi-heart-fill:hover{
   color: red !important;
 }
+
+#forum-area{
+  overflow-x: auto;
+  height: 400px;
+}
