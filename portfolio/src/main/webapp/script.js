@@ -16,13 +16,6 @@
  * Adds a random quote to the page.
  */
 async function addQuote() {
-  // const quotes = [
-  //   '“Do You Like Scary Movies?” - Scream', 
-  //   '“Do You Want To Play A Game?” - Saw', 
-  //   '“It Rubs The Lotion On Its Skin Or Else It Gets The Hose Again.” - The Silence Of The Lambs',
-  //   '"Groovy" - Evil Dead II', '“Nobody trusts anybody now…and we\'re all very tired.” - The Thing', 
-  //   '“It\'s Halloween; I guess everyone\'s entitled to one good scare.” - Halloween'
-  // ];
 
   const responseFromServer = await fetch('/quote');
   // The json() function returns an object that contains fields that we can
