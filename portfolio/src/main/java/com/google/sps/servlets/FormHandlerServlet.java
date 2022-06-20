@@ -45,7 +45,7 @@ public class FormHandlerServlet extends HttpServlet {
     // Write the value to the response so the user can see it.
     response.getWriter().println("Name: " + firstName + lastName + "\nMessage: " + message + "\nSecret:" + secret);
 
-    // response.sendRedirect("https://mherrera-sps-summer22.uc.r.appspot.com/#footer");
+    response.sendRedirect("https://mherrera-sps-summer22.uc.r.appspot.com/#forum");
   }
 }
 
