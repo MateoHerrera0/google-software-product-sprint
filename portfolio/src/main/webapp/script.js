@@ -31,3 +31,39 @@ async function addQuote() {
 }
 
 
+/**
+ * Adds forum posts to forum
+ */
+async function addForumPosts() {
+
+  const responseFromServer = await fetch('/get-posts');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const posts = await responseFromServer.json();
+  console.log(posts);
+
+  const bootstrap = 'col-md-4 card me-md-4 mb-md-0 mb-4 p-3 rounded text-center';
+  let textColor = ''
+  let bg = ''
+  
+  // Add it to the page.
+  const forumContainer = document.getElementById('forum-area');
+  
+  for (let i = 0; i < posts.length; i++) {
+    const element = posts[i];
+    let div = document.createElement('div');
+    if (element.secret) {
+      bg = ' bg-warning';
+      textColor = ' text-light';
+    } else {
+      bg = ' bg-light';
+      textColor = ' text-dark';
+    }
+
+    let tags = bootstrap + bg + textColor;
+    div.setAttribute('class', tags);
+    div.innerHTML = "<p>" + element.message + "<br>-" + element.firstName + " " + element.lastName + "</p>";
+    forumContainer.appendChild(div);
+  }
+  
+}
